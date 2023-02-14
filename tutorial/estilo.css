@@ -1,0 +1,18 @@
+.card{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:30px
+
+}
+.parent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:lightgray;
+    width:50%;
+    
+}
