@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .carrinho
+        {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right:0px;
+            animation: anima_carro 10s infinite alternate;
+        }
+        @keyframes anima_carro
+        {
+            0%   { left: 0px; }
+            50%  { left: 500px; }
+            100% { left:1000px  }
+        }
+
+</style>
+</head>
+<body>
+    <img src="carro.gif" class="carrinho">
+</body>
+</html>
