@@ -6,24 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        div{display: flex;}
         .minha_engrenagem
         {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            animation: engrena 1s infinite linear;
+            animation: engrena 6s infinite alternate;
         }
+
+        .engrenagem
+        {
+            margin-left:-53px;
+            animation: engrenagem_contrario 6s infinite alternate;  
+        }
+
         @keyframes engrena
         {
-            0%   { rotate: 0deg; }
+            0%   { rotate: 60deg; }
             
             100% { rotate: 360deg;  }
+        }
+        
+        @keyframes engrenagem_contrario
+        {
+            0%   { rotate: -30deg; }
+            
+            100% { rotate: -330deg;  }
         }
 
 
 </style>
 </head>
 <body>
+    <div>
     <img src="engrenagem.png" class="minha_engrenagem">
+    <img src="engrenagem.png" class="engrenagem">
+</div>
 </body>
 </html>
