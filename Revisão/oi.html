@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    body{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .D1{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+        background-color: lemonchiffon;
+    }
+
+    .botoes{
+        background-color: purple;
+        width: 20%;
+        height: 50px;
+        color: lightgray;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botoes:hover{
+        background-color: lightpink;
+        color:black;
+        transition: all 500ms ease-in-out;
+        cursor:pointer
+    }
+
+    .D3{
+        background-color: yellow;
+        width: 20%;
+        height: 50px;
+        color: orchid;
+        border-radius: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+
+    <div class="D1">
+
+        <a href="https://sc.senai.br/" target="_blank">
+            <div class="botoes"> SENAI </div>
+        </a>
+
+        <a href="https://www.google.com/" target="_self">
+            <div class="botoes"> GOOGLE </div>
+        </a>
+        <a href="https://mail.google.com" target='_top'>
+            <div class="botoes"> GMAIL </div>
+        </a>
+
+        <div class="botoes"> sad </div>
+
+    </div>
+
+</body>
+</html>
