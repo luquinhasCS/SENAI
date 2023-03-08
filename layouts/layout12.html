@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: blue;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+    .d1{
+        width: 940.5px;
+        height: 710.09px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .d2parent{
+        width: 30%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .d2{
+        width: 150px;
+        height: 100%;
+        background-color: yellow;
+    }
+    .d3parent{
+        width: 45%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .d3{
+        width: 100%;
+        height: 150px;
+        background-color: yellow;
+    }
+    .d5parent{
+        display: flex;
+        justify-content: space-between;
+    }
+    .d4{
+        width: 150px;
+        height: 150px;
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div class="d1">
+    <div class="d2parent">
+        <div class="d2"></div>
+    </div>
+    <div class="d3parent">
+        <div class="d4parent">
+            <div class="d3"></div>
+        </div>
+        <div class="d5parent">
+            <div class="d4"></div>
+            <div class="d4"></div>
+        </div>
+        <div class="d6parent">
+            <div class="d3"></div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
