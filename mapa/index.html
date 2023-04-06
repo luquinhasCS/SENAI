@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boneco {
+            width: 80px;
+            position: absolute;
+            top: 400px;
+            left: 600px;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .pos-card {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            width: 300px;
+            background-color: indianred;
+            color: white;
+            padding: 20px;
+            border-radius: 40px
+        }
+    </style>
+</head>
+
+<body onmousemove="showCoord(event)" style="cursor: none;">
+    <div style="display: flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+overflow: hidden;">
+        <map name="map">
+            <area shape="circle" coords="260, 440, 26" href="" onmouseenter="displaySim()" onmouseleave="displayNao()"
+                alt="RS">
+            <area shape="circle" coords="296, 410, 15" href="https://pt.wikipedia.org/wiki/Santa_Catarina"
+                target="_self" alt="SC">
+            <area shape="circle" coords="280, 378, 20" href="https://pt.wikipedia.org/wiki/Paran%C3%A1" target="_self"
+                alt="PR">
+            <area shape="circle" coords="314, 348, 20" href="https://pt.wikipedia.org/wiki/S%C3%A3o_Paulo_(estado)"
+                target="_self" alt="SP">
+            <area shape="circle" coords="384, 351, 12" href="https://pt.wikipedia.org/wiki/Rio_de_Janeiro_(estado)"
+                target="_self" alt="RJ">
+            <area shape="circle" coords="364, 303, 40" href="https://pt.wikipedia.org/wiki/Minas_Gerais" target="_self"
+                alt="MG">
+            <area shape="circle" coords="408, 321, 12" href="https://pt.wikipedia.org/wiki/Esp%C3%ADrito_Santo_(estado)"
+                target="_self" alt="ES">
+            <area shape="circle" coords="240, 325, 30" href="https://pt.wikipedia.org/wiki/Mato_Grosso_do_Sul"
+                target="_self" alt="MS">
+            <area shape="circle" coords="230, 240, 50" href="https://pt.wikipedia.org/wiki/Mato_Grosso" target="_self"
+                alt="MT">
+            <area shape="circle" coords="300, 280, 20" href="https://pt.wikipedia.org/wiki/Goi%C3%A1s" target="_self"
+                alt="GO">
+            <area shape="circle" coords="326, 266, 4" href="https://pt.wikipedia.org/wiki/Distrito_federal"
+                target="_self" alt="DF">
+            <area shape="circle" coords="404, 228, 35" href="https://pt.wikipedia.org/wiki/Bahia" target="_self"
+                alt="BA">
+            <area shape="circle" coords="454, 210, 8" href="https://pt.wikipedia.org/wiki/Sergipe" target="_self"
+                alt="SE">
+            <area shape="circle" coords="466, 197, 8" href="https://pt.wikipedia.org/wiki/Alagoas" target="_self"
+                alt="AL">
+            <area shape="circle" coords="450, 181, 8" href="https://pt.wikipedia.org/wiki/Pernambuco" target="_self"
+                alt="PE">
+            <area shape="circle" coords="475, 167, 8" href="https://pt.wikipedia.org/wiki/Para%C3%ADba" target="_self"
+                alt="PB">
+            <area shape="circle" coords="466, 146, 10" href="https://pt.wikipedia.org/wiki/Rio_Grande_do_Norte"
+                target="_self" alt="RN">
+            <area shape="circle" coords="431, 137, 20" href="https://pt.wikipedia.org/wiki/Cear%C3%A1" target="_self"
+                alt="CE">
+            <area shape="circle" coords="394, 166, 20" href="https://pt.wikipedia.org/wiki/Piau%C3%AD" target="_self"
+                alt="PI">
+            <area shape="circle" coords="360, 135, 25" href="https://pt.wikipedia.org/wiki/Maranh%C3%A3o" target="_self"
+                alt="MA">
+            <area shape="circle" coords="320, 198, 25" href="https://pt.wikipedia.org/wiki/Tocantins" target="_self"
+                alt="TO">
+            <area shape="circle" coords="265, 129, 50" href="https://pt.wikipedia.org/wiki/Par%C3%A1" target="_self"
+                alt="PA">
+            <area shape="circle" coords="280, 50, 20" href="https://pt.wikipedia.org/wiki/Amap%C3%A1" target="_self"
+                alt="AP">
+            <area shape="circle" coords="160, 45, 20" href="https://pt.wikipedia.org/wiki/Roraima" target="_self"
+                alt="RR">
+            <area shape="circle" coords="116, 125, 50" href="https://pt.wikipedia.org/wiki/Amazonas" target="_self"
+                alt="AM">
+            <area shape="circle" coords="43, 198, 20" href="https://pt.wikipedia.org/wiki/Acre" target="_self" alt="AC">
+            <area shape="circle" coords="140, 208, 20" href="https://pt.wikipedia.org/wiki/Rond%C3%B4nia" target="_self"
+                alt="RO">
+        </map>
+
+        <img src="mapa_brasil.jpg" alt="" class="center" id="brasilBrasileiro" usemap="#map">
+        <img src="boneco.gif" alt="" class="boneco" id="boneco">
+    </div>
+    <div class="d-none pos-card" id="card">
+        <ul>
+            <li>
+                Região: Sul
+            </li>
+            <li>
+                Capital: Porto Alegre
+            </li>
+            <li>
+                Governo: democracia representativa
+            </li>
+            <li>
+                Área territorial: 281.707,149 km² (IBGE, 2020)
+            </li>
+            <li>
+                População: 11.422.973 habitantes (IBGE, 2020)
+            </li>
+            <li>
+                Densidade demográfica: 37,96 hab./km² (IBGE, 2010)
+            </li>
+            <li>
+                Fuso: Horário Padrão de Brasília (GMT -3 horas)
+            </li>
+            <li>
+                Clima: Subtropical</li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    function showCoord(event) {
+        var mouseY = event.pageY
+        var mouseX = event.pageX
+
+        boneco.style.left = mouseX - 25 + "px";
+        boneco.style.top = mouseY - 97 + "px";
+    }
+
+    function displaySim() {
+        var cartao = document.getElementById('card')
+        cartao.classList.remove('d-none')
+    }
+    function displayNao() {
+        var cartao = document.getElementById('card')
+        cartao.classList.add('d-none')
+    }
+
+
+</script>
+
+</html>
