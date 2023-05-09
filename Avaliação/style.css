@@ -49,7 +49,7 @@ body {
 
 
 .key_pressed {
-    border-color: green
+    border-color: red
 }
 
 .key_pressed_m {
