@@ -52,11 +52,6 @@ body {
     border-color: red
 }
 
-.key_pressed_m {
-    border-color: gray
-}
-
-
 #hidden_text {
     width: 1px;
     height: 1px;
@@ -70,13 +65,4 @@ body {
 
 .key_name {
     font-family: sans-serif
-}
-
-
-.pcliqGo img {
-    padding: 2px;
-    border: 2px solid gray;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px
 }
