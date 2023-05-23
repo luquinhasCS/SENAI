@@ -26,10 +26,11 @@
             top: 660px;
             width: 300px;
         }
-        p{
+
+        p {
             position: fixed;
-            bottom:-5px;
-            font-size:20px
+            bottom: -5px;
+            font-size: 20px
         }
     </style>
 
@@ -44,12 +45,43 @@
 <script src="jquery-3.7.0.min.js"></script>
 
 <script>
-    $('#foguete').on('click', function(){
+    data = new Date()
+    tempo_inicial = data.getTime()
+    document.onkeydown = Pega_Tecla;
+
+    function Pega_Tecla(e) {
+        e = e || window.event;
+
+        tecla = e.keyCode;
+        console.log(tecla); // MOSTRA O CÓDIGO DA TECLA PRESSIONADA
+
+        data = new Date()
+        tempo_final = data.getTime()
+        if (tempo_final - tempo_inicial > 1000) {
+            tempo_inicial = tempo_final
+
+            if (tecla == 37) {
+                x = x - 20
+            }
+            if (tecla == 39) {
+                x = x + 20
+            }
+        }
+
+
+    }
+
+    x = 870
+    y = 20
+    TOPO = ""
+    ESQUERDA = ""
+
+    $('#foguete').on('click', function () {
         let musica = new Audio('contagem_regressiva.mp3')
         let audio = new Audio('lancamento_foguete.mp3')
         musica.play()
         setTimeout(subir, 20000)
-        setTimeout(()=>{audio.play()}, 20000)
+        setTimeout(() => { audio.play() }, 20000)
         setTimeout(descer, 40000)
     })
     y = 20
@@ -66,9 +98,6 @@
         if (y < 630) {
             y = 630
         }
-
-        TOPO = y + "px"
-
         $("#foguete").animate({ top: TOPO }, 25000)
         console.log(TOPO)
         audioFinal.play()
