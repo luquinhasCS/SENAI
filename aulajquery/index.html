@@ -1,35 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quartola</title>
-    
+    <title>Foguete sobe e desce</title>
     <style>
-        body{
+        body {
             width: 100%;
-            height: 100vh;
-            background-image: linear-gradient(0deg, lightblue, darkblue);
+            height: 150vh;
+            background-image: linear-gradient(0deg, rgba(191, 255, 0, 0.7), rgb(255, 0, 0));
             overflow: hidden;
         }
-        .foguetao{
-            position:absolute;
-            left:750px;
-            top:700px
+
+        .foguetinho {
+            position: fixed;
+            left: 750px;
+            top: 630px;
+        }
+
+        .mundo {
+            position: fixed;
+            left: 645px;
+            top: 660px;
+            width: 300px;
+        }
+        p{
+            position: fixed;
+            bottom:-5px;
+            font-size:20px
         }
     </style>
-</head>
-<body>
-    
-    <img src="foguete.gif" width="80px" class="foguetao" id="foguete">
 
+</head>
+
+<body>
+    <img id="mundo" src="planetoide.png" width="100px" class="mundo">
+    <img id="foguete" src="foguete.gif" width="100px" class="foguetinho">
+    <p>Lucas de Carvalho dos Santos</p>
 </body>
+
 <script src="jquery-3.7.0.min.js"></script>
+
 <script>
-    var temporizador = setTimeout(Subir, 1000)
-    function Subir(){
-        $('#foguete').animate({top:})
+    $('#foguete').on('click', function(){
+        let musica = new Audio('contagem_regressiva.mp3')
+        let audio = new Audio('lancamento_foguete.mp3')
+        musica.play()
+        setTimeout(subir, 20000)
+        setTimeout(()=>{audio.play()}, 20000)
+        setTimeout(descer, 40000)
+    })
+    y = 20
+    TOPO = ""
+
+    function subir() {
+        TOPO = y + "px"
+        $("#foguete").animate({ top: TOPO }, 18000)
     }
+    function descer() {
+        let audioFinal = new Audio('cbat [TubeRipper.com].m4a')
+        y = y + 90
+
+        if (y < 630) {
+            y = 630
+        }
+
+        TOPO = y + "px"
+
+        $("#foguete").animate({ top: TOPO }, 25000)
+        console.log(TOPO)
+        audioFinal.play()
+    }
+
+
 </script>
+
 </html>
